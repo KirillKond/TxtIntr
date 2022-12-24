@@ -4,15 +4,15 @@
 
 all: debug release
 
-debug: hello-dbg
+debug: Calculator-dbg
 
-hello-dbg: hello.cpp
-	g++ -g -O0 hello.cpp -o hello-dbg -Wall
+hello-dbg: Calculator.cpp
+	g++ -g -O0 Calculator.cpp -o Calculator-dbg -Wall
 
-release: hello
+release: Calculator
 
-hello: hello.cpp
-	g++ -O2 hello.cpp -o hello -DNDEBUG -Wall
+Calculator: Calculator.cpp
+	g++ -O2 Calculator.cpp -o Calculator -DNDEBUG -Wall
 
 clean:
-	rm -rf hello-dbg hello
+	rm -rf Calculator-dbg Calculator
